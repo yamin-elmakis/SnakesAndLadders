@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llmainLayout"
+    android:background="@drawable/board_background2"
+    android:layout_width="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/ivnewgameheadline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/headline2" />
+
+    <TextView
+        android:id="@+id/tvturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/ivturn"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:text="player: " />
+
+    <TextView
+        android:id="@+id/tvplayername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvturn"
+        android:layout_marginLeft="25dp"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:text="name" />
+
+    <TextView
+        android:id="@+id/tvscoreingame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:layout_below="@+id/tvplayername"
+        android:layout_marginLeft="25dp"
+        android:text="score: " />
+
+    <ImageView
+        android:id="@+id/ivturn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/tvturn"
+        android:background="@drawable/player_1" />
+
+</RelativeLayout>
