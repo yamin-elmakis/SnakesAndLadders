@@ -1,4 +1,4 @@
-package com.example.simpletest.db;
+package com.example.mah.db;
 
 import android.widget.BaseAdapter;
 

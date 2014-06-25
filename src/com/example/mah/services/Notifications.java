@@ -1,7 +1,7 @@
-package com.example.simpletest.services;
+package com.example.mah.services;
 
-import com.example.simpletest.AppRes;
-import com.example.simpletest.R;
+import com.example.mah.AppRes;
+import com.example.mah.R;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;

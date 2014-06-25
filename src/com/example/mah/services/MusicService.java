@@ -1,8 +1,6 @@
-package com.example.simpletest.services;
+package com.example.mah.services;
 
-import com.example.simpletest.R;
-import com.example.simpletest.R.raw;
-
+import com.example.mah.R;
 import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;

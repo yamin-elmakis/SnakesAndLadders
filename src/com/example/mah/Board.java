@@ -1,8 +1,8 @@
-package com.example.simpletest;
+package com.example.mah;
 
 import java.util.HashMap;
 import java.util.Map;
-
+import com.example.mah.R;
 import android.content.Context;
 import android.widget.RelativeLayout;
 

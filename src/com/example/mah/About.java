@@ -1,5 +1,6 @@
-package com.example.simpletest;
+package com.example.mah;
 
+import com.example.mah.R;
 import android.app.Activity;
 import android.os.Bundle;
 

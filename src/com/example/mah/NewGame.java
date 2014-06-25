@@ -1,13 +1,11 @@
-package com.example.simpletest;
+package com.example.mah;
 
-import com.example.simpletest.services.MusicService;
-
+import com.example.mah.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 public class NewGame extends Activity{
@@ -37,7 +35,7 @@ public class NewGame extends Activity{
 		@Override
 		public void onClick(View imageButton) {
 			try {
-				gameClass = Class.forName("com.example.simpletest.GameLogic");
+				gameClass = Class.forName(AppRes.GAME_LOGIC);
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}

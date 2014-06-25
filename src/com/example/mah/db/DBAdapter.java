@@ -1,6 +1,6 @@
-package com.example.simpletest.db;
+package com.example.mah.db;
 
-import com.example.simpletest.AppRes;
+import com.example.mah.AppRes;
 
 import android.content.ContentValues;
 import android.content.Context;

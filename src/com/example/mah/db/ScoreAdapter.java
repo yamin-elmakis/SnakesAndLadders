@@ -1,9 +1,7 @@
-package com.example.simpletest.db;
+package com.example.mah.db;
 
 import java.util.List;
-
-import com.example.simpletest.R;
-
+import com.example.mah.R;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;

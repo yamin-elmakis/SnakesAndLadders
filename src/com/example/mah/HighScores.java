@@ -1,20 +1,15 @@
-package com.example.simpletest;
+package com.example.mah;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.example.simpletest.db.DBAdapter;
-import com.example.simpletest.db.ScoreAdapter;
-import com.example.simpletest.db.ScoreElement;
-import com.example.simpletest.services.MusicService;
-
+import com.example.mah.db.DBAdapter;
+import com.example.mah.db.ScoreAdapter;
+import com.example.mah.db.ScoreElement;
+import com.example.mah.R;
 import android.app.Activity;
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.ListView;
-import android.widget.TextView;
-
 
 public class HighScores extends Activity {
 	

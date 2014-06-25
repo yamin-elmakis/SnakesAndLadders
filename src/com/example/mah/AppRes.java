@@ -1,7 +1,19 @@
-package com.example.simpletest;
+package com.example.mah;
+
+import com.example.mah.R;
 
 public class AppRes {
 
+	// Classes path
+	public static final String 	OPTIONS = "com.example.mah.Options";
+	public static final String 	MAIN = "com.example.mah.MainActivity";
+	public static final String 	NEW_GAME = "com.example.mah.NewGame";
+	public static final String 	GAME_LOGIC = "com.example.mah.GameLogic";
+	public static final String 	MUSIC = "com.example.mah.services.MusicService";
+	public static final String 	AUTO_PLAY = "com.example.mah.services.GameService";
+	public static final String 	HIGH_SCORES = "com.example.mah.HighScores";
+	public static final String 	ABOUT = "com.example.mah.About";
+	
 	// game resources
 	public static final int 	GAME_DELAY = 650;
 	public static final int 	vibrationTime = 800;

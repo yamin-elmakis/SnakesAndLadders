@@ -1,13 +1,12 @@
-package com.example.simpletest;
+package com.example.mah;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import com.example.simpletest.db.DBAdapter;
-import com.example.simpletest.db.GamePreferences;
-import com.example.simpletest.services.GameService;
-import com.example.simpletest.services.MusicService;
-import com.example.simpletest.services.Notifications;
-
+import com.example.mah.db.DBAdapter;
+import com.example.mah.db.GamePreferences;
+import com.example.mah.services.GameService;
+import com.example.mah.services.Notifications;
+import com.example.mah.R;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -57,7 +56,7 @@ public class GameLogic extends Activity implements Imoveable {
 		prefs.setPawn(player2, gameDifficulty);
 		prefs.setWhosTurn(whosTurn, gameDifficulty);
 		prefs.setWin(win, gameDifficulty);
-		if (!win && !backPressed){
+		if (!win && !backPressed && prefs.getAutoPlayFleg()){
 			Intent intent = new Intent(this, GameService.class);
 			intent.putExtra(AppRes.DIFFICULTY , gameDifficulty);
 			AppRes.RUN_IN_BACK = true;

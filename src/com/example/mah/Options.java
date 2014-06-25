@@ -1,15 +1,12 @@
-package com.example.simpletest;
+package com.example.mah;
 
-import com.example.simpletest.db.GamePreferences;
-import com.example.simpletest.services.MusicService;
-
+import com.example.mah.db.GamePreferences;
+import com.example.mah.services.MusicService;
+import com.example.mah.R;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -20,7 +17,7 @@ import android.widget.ImageButton;
 public class Options extends Activity implements OnClickListener{
 
 	private String TAG = "Options";
-	private Button bSound, bMusic, bVibration;
+	private Button bSound, bMusic, bVibration, bAutoPlay;
 	private int onOff[] = {R.drawable.off, R.drawable.on};
 	private Vibrator vibrator;
 	private ImageButton ibabout;
@@ -39,24 +36,24 @@ public class Options extends Activity implements OnClickListener{
 		vibrator = (Vibrator) getSystemService(this.VIBRATOR_SERVICE);
 		bSound = (Button) findViewById(R.id.bsound);
 		bMusic = (Button) findViewById(R.id.bmusic);
+		bAutoPlay = (Button) findViewById(R.id.b_auto_play);
 		ibabout = (ImageButton) findViewById(R.id.ibabout);
 		bVibration = (Button) findViewById(R.id.bvibration);
 		playerName = (EditText) findViewById(R.id.etPlayerName);
-		bSound.setBackgroundResource((AppRes.soundFlag) ? onOff[1] : onOff[0]);
-		bMusic.setBackgroundResource((AppRes.musicFlag) ? onOff[1] : onOff[0]);
-		bVibration.setBackgroundResource((AppRes.vibrationFlag) ? onOff[1] : onOff[0]);
+		
 	}
 	
 	private void setParams() {
 		bSound.setOnClickListener(this);
 		bMusic.setOnClickListener(this);
+		bAutoPlay.setOnClickListener(this);
 		bVibration.setOnClickListener(this);
 		ibabout.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				Class gameClass = null;
 				try {
-					gameClass = Class.forName("com.example.simpletest.About");
+					gameClass = Class.forName(AppRes.ABOUT);
 				} catch (ClassNotFoundException e) {
 					e.printStackTrace();
 				}
@@ -65,6 +62,10 @@ public class Options extends Activity implements OnClickListener{
 			}
 		});
 		prefs = new GamePreferences(this);
+		bSound.setBackgroundResource((AppRes.soundFlag) ? onOff[1] : onOff[0]);
+		bMusic.setBackgroundResource((AppRes.musicFlag) ? onOff[1] : onOff[0]);
+		bAutoPlay.setBackgroundResource((prefs.getAutoPlayFleg()) ? onOff[1] : onOff[0]);
+		bVibration.setBackgroundResource((AppRes.vibrationFlag) ? onOff[1] : onOff[0]);
 	}
 
 	@Override
@@ -73,6 +74,11 @@ public class Options extends Activity implements OnClickListener{
 		case R.id.bsound:
 			AppRes.soundFlag = !AppRes.soundFlag;
 			bSound.setBackgroundResource((AppRes.soundFlag) ? onOff[1] : onOff[0]);
+			break;
+		case R.id.b_auto_play:
+			boolean autoPlay = !prefs.getAutoPlayFleg();
+			prefs.setAutoPlayFleg(autoPlay);
+			bAutoPlay.setBackgroundResource((autoPlay) ? onOff[1] : onOff[0]);
 			break;
 		case R.id.bmusic:
 			AppRes.musicFlag = !AppRes.musicFlag;

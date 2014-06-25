@@ -1,6 +1,7 @@
-package com.example.simpletest.db;
+package com.example.mah.db;
 
-import com.example.simpletest.AppRes;
+import com.example.mah.AppRes;
+
 import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;

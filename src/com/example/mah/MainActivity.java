@@ -1,8 +1,8 @@
-package com.example.simpletest;
+package com.example.mah;
 
-import com.example.simpletest.db.GamePreferences;
-import com.example.simpletest.services.MusicService;
-
+import com.example.mah.db.GamePreferences;
+import com.example.mah.services.MusicService;
+import com.example.mah.R;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				try {
-					gameClass = Class.forName("com.example.simpletest.HighScores");
+					gameClass = Class.forName(AppRes.HIGH_SCORES);
 				} catch (ClassNotFoundException e) {
 					e.printStackTrace();
 				}
@@ -65,14 +65,14 @@ public class MainActivity extends Activity {
 		public void onClick(View imageButton) {
 			if (imageButton == options) {
 				try {
-					gameClass = Class.forName("com.example.simpletest.Options");
+					gameClass = Class.forName(AppRes.OPTIONS);
 				} catch (ClassNotFoundException e) {
 					e.printStackTrace();
 				}
 			}
 			if (imageButton == newGame) {
 				try {
-					gameClass = Class.forName("com.example.simpletest.NewGame");
+					gameClass = Class.forName(AppRes.NEW_GAME);
 				} catch (ClassNotFoundException e) {
 					e.printStackTrace();
 				}

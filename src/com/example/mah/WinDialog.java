@@ -1,13 +1,12 @@
-package com.example.simpletest;
+package com.example.mah;
 
-import com.example.simpletest.db.GamePreferences;
-
+import com.example.mah.db.GamePreferences;
+import com.example.mah.R;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -48,7 +47,7 @@ public class WinDialog extends Dialog implements android.view.View.OnClickListen
 
 	private void closeDialog() {
 		try {
-			gameClass = Class.forName("com.example.simpletest.MainActivity");
+			gameClass = Class.forName(AppRes.MAIN);
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}

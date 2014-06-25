@@ -1,4 +1,4 @@
-package com.example.simpletest;
+package com.example.mah;
 
 public interface Imoveable {
 

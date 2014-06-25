@@ -1,7 +1,7 @@
-package com.example.simpletest.db;
+package com.example.mah.db;
 
-import com.example.simpletest.Pawn;
-import com.example.simpletest.Point;
+import com.example.mah.Pawn;
+import com.example.mah.Point;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -10,10 +10,11 @@ public class GamePreferences {
 
 	private SharedPreferences prefs;
 	private Context context;
-	private final String CLASS_NAME = "com.example.simpletest";
+	private final String CLASS_NAME = "com.example.mah";
 	private final String PLAYER_NAME = "playerName";
 	private final String SOUND_FLEG = "sound_fleg";
 	private final String MUSIC_FLEG = "music_fleg";
+	private final String AUTO_PLAY_FLEG = "auto_play_fleg";
 	private final String VIBRATION_FLEG = "vibration_fleg";
 	private final String TURN = "whosTurn";
 	private final String WIN = "win";
@@ -105,6 +106,14 @@ public class GamePreferences {
 	
 	public void setMusicFleg(Boolean musicFleg) {
 		prefs.edit().putBoolean(MUSIC_FLEG, musicFleg).commit();
+	}
+	
+	public boolean getAutoPlayFleg(){
+		return prefs.getBoolean(AUTO_PLAY_FLEG, false);
+	}
+	
+	public void setAutoPlayFleg(Boolean AutoPlayFleg) {
+		prefs.edit().putBoolean(AUTO_PLAY_FLEG, AutoPlayFleg).commit();
 	}
 	
 	public boolean getSoundFleg(){

@@ -1,12 +1,12 @@
-package com.example.simpletest.services;
+package com.example.mah.services;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-import com.example.simpletest.AppRes;
-import com.example.simpletest.GameLogic;
-import com.example.simpletest.db.GamePreferences;
+import com.example.mah.AppRes;
+import com.example.mah.GameLogic;
+import com.example.mah.db.GamePreferences;
 
 import android.annotation.SuppressLint;
 import android.app.Service;

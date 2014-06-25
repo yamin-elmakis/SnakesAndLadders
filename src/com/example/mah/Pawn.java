@@ -1,4 +1,4 @@
-package com.example.simpletest;
+package com.example.mah;
 
 import android.content.Context;
 import android.util.Log;
