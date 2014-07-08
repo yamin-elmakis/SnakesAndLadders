@@ -16,8 +16,8 @@ public class ScoreAdapter extends ArrayAdapter<ScoreElement>{
 	private int layout;
 	private DBAdapter db;
 
-	public ScoreAdapter(Context context, int resource, List<ScoreElement> scoreList, int layout) {
-		super(context, resource, scoreList);
+	public ScoreAdapter(Context context, int ListViewId, List<ScoreElement> scoreList, int layout) {
+		super(context, ListViewId, scoreList);
 		this.context = context;
 		this.scoreList = scoreList;
 		this.layout= layout;
